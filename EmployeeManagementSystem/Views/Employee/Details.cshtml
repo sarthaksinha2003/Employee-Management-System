@@ -1,0 +1,16 @@
+﻿@model EmployeeManagementSystem.Models.Employee
+
+<h2>Employee Details</h2>
+<hr />
+
+@if (Model == null)
+{
+    <p>No Employee Found.</p>
+}
+else
+{
+    <p><strong>ID:</strong> @Model.Id</p>
+    <p><strong>Name:</strong> @Model.Name</p>
+    <p><strong>Department:</strong> @Model.Department</p>
+    <p><strong>Salary:</strong> @Model.Salary</p>
+}

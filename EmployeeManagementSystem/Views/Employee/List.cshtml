@@ -1,0 +1,30 @@
+﻿@model List<EmployeeManagementSystem.Models.Employee>;
+
+<h2 class="mb-4">Employee List</h2>
+
+<table class="table table-striped table-bordered">
+
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+    @foreach (Employee employee in Model)
+    {
+        <tr>
+            <td>@employee.Id</td>
+            <td>@employee.Name</td>
+            <td>@employee.Department</td>
+            <td>@employee.Salary</td>
+        </tr>
+    }
+
+    </tbody>
+
+</table>
