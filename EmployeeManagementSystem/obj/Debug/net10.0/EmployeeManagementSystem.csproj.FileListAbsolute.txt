@@ -96,3 +96,4 @@ C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementS
 C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net10.0\EmployeeManagementSystem.genruntimeconfig.cache
 C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net10.0\ref\EmployeeManagementSystem.dll
 C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net10.0\compressed\5qg6okrlri-{0}-89f1kufp5t-89f1kufp5t.gz
+C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net10.0\EmployeeManagementSystem.sourcelink.json
