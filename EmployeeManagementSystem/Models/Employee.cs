@@ -15,6 +15,6 @@ namespace EmployeeManagementSystem.Models
 
         [Required(ErrorMessage = "Salary is required.")]
         [Range(1000, 1000000, ErrorMessage = "Salary must be between 1000 and 1000000.")]
-        public double Salary { get; set; }
+        public double Salary {  get; set; }
     }
 }

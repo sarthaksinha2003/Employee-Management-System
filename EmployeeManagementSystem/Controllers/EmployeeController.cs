@@ -1,8 +1,6 @@
 ﻿using EmployeeManagementSystem.Models;
 using EmployeeManagementSystem.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection.Metadata.Ecma335;
-using System.Xml.Linq;
 
 namespace EmployeeManagementSystem.Controllers
 {
@@ -41,7 +39,6 @@ namespace EmployeeManagementSystem.Controllers
             }
             this.employeeService.AddEmployee(employee);
             return RedirectToAction(nameof(List));
-            //return Content("Name: "+ employee.Name + ", " + "Department: " + employee.Department + ", " + "Salary: " + employee.Salary);
         }
 
         [HttpGet]
@@ -66,12 +63,8 @@ namespace EmployeeManagementSystem.Controllers
                 return View(employee);
             }
 
-            if (this.employeeService.UpdateEmployee(employee))
-            {
-                return RedirectToAction(nameof(List));
-            }
-
-            return NotFound();
+            employeeService.UpdateEmployee(employee);
+            return RedirectToAction(nameof(List));
         }
 
         [HttpGet]
@@ -90,6 +83,7 @@ namespace EmployeeManagementSystem.Controllers
         public IActionResult Delete(Employee employee)
         {
             this.employeeService.DeleteEmployee(employee.Id);
+
             return RedirectToAction(nameof(List));
         }
     }

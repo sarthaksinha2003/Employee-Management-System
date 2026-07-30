@@ -1,74 +1,56 @@
-﻿using EmployeeManagementSystem.Models;
+﻿using EmployeeManagementSystem.Data;
+using EmployeeManagementSystem.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeManagementSystem.Services
 {
     public class EmployeeService
     {
-        static List<Employee> employees = new List<Employee>();
+        private readonly ApplicationDbContext context;
+        public EmployeeService(ApplicationDbContext context)
+        {
+            this.context = context;
+        }
         public List<Employee> GetEmployees()
         {
-            return employees;
+            return this.context.Employees.ToList();
         }
         public Employee? GetEmployeeById(int id)
-        {
-            //List<Employee> employees = GetEmployees();
-            foreach(Employee emp in employees)
-            {
-                if(emp.Id == id)
-                {
-                    return emp;
-                }
-            }
-            return null;
+        {   
+            return this.context.Employees.FirstOrDefault(emp => emp.Id == id);
         }
 
         public void AddEmployee(Employee employee)
         {
-            int maxId = 0;
-            foreach (Employee emp in employees)
-            {
-                if (emp.Id > maxId)
-                {
-                    maxId = emp.Id;
-                }
-            }
-            employee.Id = maxId+1;
-            employees.Add(employee);
+            this.context.Employees.Add(employee);
+            this.context.SaveChanges();
         }
 
-        public bool UpdateEmployee(Employee employee)
+        public void UpdateEmployee(Employee employee)
         {
-            if (employee == null)
+            Employee? currentEmployee = this.context.Employees.Find(employee.Id);
+            if(currentEmployee == null)
             {
-                return false;
+                return;
             }
+            currentEmployee.Name = employee.Name;
+            currentEmployee.Department = employee.Department;
+            currentEmployee.Salary = employee.Salary;
 
-            foreach(Employee emp in employees)
-            {
-                if(employee.Id == emp.Id)
-                {
-                    emp.Name = employee.Name;
-                    emp.Department = employee.Department;
-                    emp.Salary = employee.Salary;
-                    return true;
-                }
-            }
+            context.SaveChanges();
 
-            return false;
+            //this.context.Employees.Update(employee);
+            //this.context.SaveChanges();
         }
 
-        public bool DeleteEmployee(int id)
+        public void DeleteEmployee(int id)
         {
-            foreach (Employee emp in employees)
+            Employee? employee = this.context.Employees.Find(id);
+            if (employee != null)
             {
-                if (id == emp.Id)
-                {
-                    employees.Remove(emp);
-                    return true;
-                }
+                this.context.Employees.Remove(employee);
+                this.context.SaveChanges();
             }
-
-            return false;
         }
     }
 }
