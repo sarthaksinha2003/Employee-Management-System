@@ -73,5 +73,24 @@ namespace EmployeeManagementSystem.Controllers
 
             return NotFound();
         }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Employee? employee = employeeService.GetEmployeeById(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+
+            return View(employee);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Employee employee)
+        {
+            this.employeeService.DeleteEmployee(employee.Id);
+            return RedirectToAction(nameof(List));
+        }
     }
 }

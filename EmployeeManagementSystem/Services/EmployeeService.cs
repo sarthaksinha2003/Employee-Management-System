@@ -56,5 +56,19 @@ namespace EmployeeManagementSystem.Services
 
             return false;
         }
+
+        public bool DeleteEmployee(int id)
+        {
+            foreach (Employee emp in employees)
+            {
+                if (id == emp.Id)
+                {
+                    employees.Remove(emp);
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
