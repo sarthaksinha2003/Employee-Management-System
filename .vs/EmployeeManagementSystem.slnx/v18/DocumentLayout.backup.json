@@ -36,23 +36,10 @@
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Services\\EmployeeService.cs",
               "ToolTip": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Services\\EmployeeService.cs",
               "RelativeToolTip": "EmployeeManagementSystem\\Services\\EmployeeService.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA5wCkAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-28T12:06:40.501Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
-              "ToolTip": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
-              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-28T12:00:43.519Z",
               "EditorCaption": ""
             },
             {
@@ -62,6 +49,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-28T12:00:43.519Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -84,7 +84,7 @@
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Program.cs",
               "ToolTip": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Program.cs",
               "RelativeToolTip": "EmployeeManagementSystem\\Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAqwBcAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-30T08:04:42.702Z",
               "EditorCaption": ""

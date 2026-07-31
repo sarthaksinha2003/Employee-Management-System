@@ -12,15 +12,15 @@ namespace EmployeeManagementSystem.Controllers
             this.employeeService = employeeService;
         }
 
-        public IActionResult List()
+        public async Task<IActionResult> List()
         {
-            List<Employee> employees = this.employeeService.GetEmployees();
+            List<Employee> employees = await this.employeeService.GetEmployeesAsync();
             return View(employees);
         }
 
-        public IActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
-            Employee? employee = employeeService.GetEmployeeById(id);
+            Employee? employee = await employeeService.GetEmployeeByIdAsync(id);
             return View(employee);
         }
 
@@ -31,21 +31,21 @@ namespace EmployeeManagementSystem.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Employee employee)
+        public async Task<IActionResult> Create(Employee employee)
         {
             if(!ModelState.IsValid)
             {
                 return View(employee);
             }
-            this.employeeService.AddEmployee(employee);
+            await this.employeeService.AddEmployeeAsync(employee);
             return RedirectToAction(nameof(List));
         }
 
         [HttpGet]
 
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
-            Employee? currentEmployee = employeeService.GetEmployeeById(id);
+            Employee? currentEmployee = await employeeService.GetEmployeeByIdAsync(id);
             if (currentEmployee == null)
             {
                 return View(null);
@@ -56,21 +56,21 @@ namespace EmployeeManagementSystem.Controllers
 
         [HttpPost]
 
-        public IActionResult Edit(Employee employee)
+        public async Task<IActionResult> Edit(Employee employee)
         {
             if (!ModelState.IsValid)
             {
                 return View(employee);
             }
 
-            employeeService.UpdateEmployee(employee);
+            await employeeService.UpdateEmployeeAsync(employee);
             return RedirectToAction(nameof(List));
         }
 
         [HttpGet]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            Employee? employee = employeeService.GetEmployeeById(id);
+            Employee? employee = await employeeService.GetEmployeeByIdAsync(id);
             if (employee == null)
             {
                 return NotFound();
@@ -80,9 +80,9 @@ namespace EmployeeManagementSystem.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(Employee employee)
+        public async Task<IActionResult> Delete(Employee employee)
         {
-            this.employeeService.DeleteEmployee(employee.Id);
+            await this.employeeService.DeleteEmployeeAsync(employee.Id);
 
             return RedirectToAction(nameof(List));
         }

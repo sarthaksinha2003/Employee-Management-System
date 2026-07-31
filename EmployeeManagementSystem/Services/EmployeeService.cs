@@ -11,24 +11,25 @@ namespace EmployeeManagementSystem.Services
         {
             this.context = context;
         }
-        public List<Employee> GetEmployees()
+        public async Task<List<Employee>> GetEmployeesAsync()
         {
-            return this.context.Employees.ToList();
+            return await this.context.Employees.AsNoTracking().ToListAsync();
         }
-        public Employee? GetEmployeeById(int id)
+        public async Task<Employee?> GetEmployeeByIdAsync(int id)
         {   
-            return this.context.Employees.FirstOrDefault(emp => emp.Id == id);
+            return await this.context.Employees.FirstOrDefaultAsync(emp => emp.Id == id);
         }
 
-        public void AddEmployee(Employee employee)
+        public async Task AddEmployeeAsync(Employee employee)
         {
-            this.context.Employees.Add(employee);
-            this.context.SaveChanges();
+            await this.context.Employees.AddAsync(employee);
+            await this.context.SaveChangesAsync();
         }
 
-        public void UpdateEmployee(Employee employee)
+        public async Task UpdateEmployeeAsync(Employee employee)
         {
-            Employee? currentEmployee = this.context.Employees.Find(employee.Id);
+            // type 1 for updation
+            Employee? currentEmployee = await this.context.Employees.FindAsync(employee.Id);
             if(currentEmployee == null)
             {
                 return;
@@ -37,19 +38,20 @@ namespace EmployeeManagementSystem.Services
             currentEmployee.Department = employee.Department;
             currentEmployee.Salary = employee.Salary;
 
-            context.SaveChanges();
+            await context.SaveChangesAsync();
 
+            // type 2 for updation
             //this.context.Employees.Update(employee);
             //this.context.SaveChanges();
         }
 
-        public void DeleteEmployee(int id)
+        public async Task DeleteEmployeeAsync(int id)
         {
-            Employee? employee = this.context.Employees.Find(id);
+            Employee? employee = await this.context.Employees.FindAsync(id);
             if (employee != null)
             {
                 this.context.Employees.Remove(employee);
-                this.context.SaveChanges();
+                await this.context.SaveChangesAsync();
             }
         }
     }
