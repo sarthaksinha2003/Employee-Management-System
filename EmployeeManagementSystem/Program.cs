@@ -13,6 +13,7 @@ namespace EmployeeManagementSystem
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<EmployeeService>();
+            builder.Services.AddScoped<DepartmentService>();
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
