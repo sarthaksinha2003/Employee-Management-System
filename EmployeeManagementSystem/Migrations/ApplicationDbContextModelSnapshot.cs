@@ -36,6 +36,28 @@ namespace EmployeeManagementSystem.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Departments");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "IT"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "HR"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Finance"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Marketing"
+                        });
                 });
 
             modelBuilder.Entity("EmployeeManagementSystem.Models.Employee", b =>

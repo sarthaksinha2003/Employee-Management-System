@@ -1,0 +1,23 @@
+﻿@model EmployeeManagementSystem.Models.Department
+
+<h2>Delete Department</h2>
+
+<div class="alert alert-danger">
+    Are you sure?
+</div>
+
+<p>
+    <strong>Name:</strong>
+    @Model.Name
+</p>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button class="btn btn-danger">
+        Delete
+    </button>
+
+    <a asp-action="List" class="btn btn-secondary">
+        Cancel
+    </a>
+</form>

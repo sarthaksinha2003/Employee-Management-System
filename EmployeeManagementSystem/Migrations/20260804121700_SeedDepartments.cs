@@ -2,10 +2,12 @@
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace EmployeeManagementSystem.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class SeedDepartments : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -42,6 +44,17 @@ namespace EmployeeManagementSystem.Migrations
                         principalTable: "Departments",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Departments",
+                columns: new[] { "Id", "Name" },
+                values: new object[,]
+                {
+                    { 1, "IT" },
+                    { 2, "HR" },
+                    { 3, "Finance" },
+                    { 4, "Marketing" }
                 });
 
             migrationBuilder.CreateIndex(

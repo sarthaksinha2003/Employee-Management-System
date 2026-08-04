@@ -38,6 +38,7 @@ namespace EmployeeManagementSystem
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}")
+                //pattern: "{controller=Department}/{action=List}/{id?}")
                 .WithStaticAssets();
 
             app.Run();

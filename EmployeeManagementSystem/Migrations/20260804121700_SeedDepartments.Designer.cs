@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeeManagementSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260803065917_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20260804121700_SeedDepartments")]
+    partial class SeedDepartments
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,6 +39,28 @@ namespace EmployeeManagementSystem.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Departments");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "IT"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "HR"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Finance"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Marketing"
+                        });
                 });
 
             modelBuilder.Entity("EmployeeManagementSystem.Models.Employee", b =>

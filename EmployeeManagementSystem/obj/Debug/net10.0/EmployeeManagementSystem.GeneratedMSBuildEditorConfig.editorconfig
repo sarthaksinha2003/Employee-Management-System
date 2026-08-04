@@ -31,6 +31,26 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Users/Sarthak Sinha/source/repos/EmployeeManagementSystem/EmployeeManagementSystem/Views/Department/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sarthak Sinha/source/repos/EmployeeManagementSystem/EmployeeManagementSystem/Views/Department/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sarthak Sinha/source/repos/EmployeeManagementSystem/EmployeeManagementSystem/Views/Department/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sarthak Sinha/source/repos/EmployeeManagementSystem/EmployeeManagementSystem/Views/Department/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sarthak Sinha/source/repos/EmployeeManagementSystem/EmployeeManagementSystem/Views/Department/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Sarthak Sinha/source/repos/EmployeeManagementSystem/EmployeeManagementSystem/Views/Employee/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
