@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\sarthak sinha\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\sarthak sinha\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\sarthak sinha\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\sarthak sinha\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\services\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\services\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\sarthak sinha\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\employee\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\employee\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\sarthak sinha\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72216EF6-DBB1-CBEA-C489-EEE33E8BACCF}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,41 +38,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Services\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Services\\EmployeeService.cs",
-              "ToolTip": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Services\\EmployeeService.cs",
-              "RelativeToolTip": "EmployeeManagementSystem\\Services\\EmployeeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-04T12:44:52.894Z",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-05T13:18:07.108Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "List.cshtml",
-              "DocumentMoniker": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\List.cshtml",
-              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Employee\\List.cshtml",
-              "ToolTip": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\List.cshtml",
-              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Employee\\List.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-04T12:44:44.865Z",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-05T12:43:07.896Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
-              "ToolTip": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
-              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAkwC0AAAApAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DashboardService.cs",
+              "DocumentMoniker": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Services\\DashboardService.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Services\\DashboardService.cs",
+              "ToolTip": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Services\\DashboardService.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Services\\DashboardService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-04T12:44:35.322Z",
+              "WhenOpened": "2026-08-05T11:56:38.655Z",
               "EditorCaption": ""
             }
           ]

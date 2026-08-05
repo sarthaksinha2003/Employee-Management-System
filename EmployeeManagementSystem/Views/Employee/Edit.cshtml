@@ -1,4 +1,4 @@
-﻿@model EmployeeManagementSystem.Models.Employee
+﻿@model EmployeeManagementSystem.ViewModels.EmployeeFormViewModel
 
 <h2>Edit Employee</h2>
 
@@ -14,33 +14,37 @@ else
         class="text-danger">
         </div>
 
-        <input asp-for="Id" type="hidden" />
+        <input asp-for="Employee.Id" type="hidden" />
 
         <div class="mb-3">
-            <label asp-for="Name"></label>
-            <input asp-for="Name" class="form-control" />
-            <span asp-validation-for="Name" class="text-danger"></span>
+            <label asp-for="Employee.Name"></label>
+            <input asp-for="Employee.Name" class="form-control" />
+            <span asp-validation-for="Employee.Name" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
-            <label asp-for="Department"></label>
-            <select asp-for="DepartmentId"
-                    asp-items="ViewBag.Departments"
+            <label asp-for="Employee.DepartmentId"></label>
+            <select asp-for="Employee.DepartmentId"
+                    asp-items="Model.Departments"
                     class="form-select">
             </select>
-            <span asp-validation-for="Department" class="text-danger"></span>
+            <span asp-validation-for="Employee.Department" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
-            <label asp-for="Salary"></label>
-            <input asp-for="Salary" class="form-control" />
-            <span asp-validation-for="Salary" class="text-danger"></span>
+            <label asp-for="Employee.Salary"></label>
+            <input asp-for="Employee.Salary" class="form-control" />
+            <span asp-validation-for="Employee.Salary" class="text-danger"></span>
         </div>
 
         <div>
             <button type="submit" class="btn btn-primary">
                 Update Employee
             </button>
+
+            <a asp-action="List" class="btn btn-secondary">
+                Back To List
+            </a>
         </div>
 
     </form>

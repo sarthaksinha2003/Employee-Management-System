@@ -1,5 +1,4 @@
-﻿@model EmployeeManagementSystem.Models.Employee
-
+﻿@model EmployeeManagementSystem.ViewModels.EmployeeFormViewModel
 <h2>Create Employee</h2>
 
 <form asp-action="Create" method="post">
@@ -9,33 +8,37 @@
     </div>
 
     <div class="mb-3">
-        <label asp-for="Name"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+        <label asp-for="Employee.Name"></label>
+        <input asp-for="Employee.Name" class="form-control" />
+        <span asp-validation-for="Employee.Name" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
-        <label asp-for="Department"></label>
+        <label asp-for="Employee.DepartmentId"></label>
 
-        <select asp-for="DepartmentId"
-        asp-items="ViewBag.Departments"
-        class="form-select">
+        <select asp-for="Employee.DepartmentId"
+        asp-items="Model.Departments"
+        class="form-control">
             <option value="">Select Department</option>
         </select>
 
-        <span asp-validation-for="DepartmentId" class="text-danger"></span>
+        <span asp-validation-for="Employee.DepartmentId" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
-        <label asp-for="Salary"></label>
-        <input asp-for="Salary" class="form-control" />
-        <span asp-validation-for="Salary" class="text-danger"></span>
+        <label asp-for="Employee.Salary"></label>
+        <input asp-for="Employee.Salary" class="form-control" />
+        <span asp-validation-for="Employee.Salary" class="text-danger"></span>
     </div>
 
     <div>
         <button type="submit" class="btn btn-success">
         Save
         </button>
+
+        <a asp-action="List" class="btn btn-secondary">
+            Back To List
+        </a>
     </div>
 
 </form>

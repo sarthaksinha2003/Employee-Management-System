@@ -14,6 +14,7 @@ namespace EmployeeManagementSystem
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<EmployeeService>();
             builder.Services.AddScoped<DepartmentService>();
+            builder.Services.AddScoped<DashboardService>();
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));

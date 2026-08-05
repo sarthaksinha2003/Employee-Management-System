@@ -1,8 +1,47 @@
-﻿@{
+﻿@model EmployeeManagementSystem.ViewModels.DashboardViewModel
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center mb-5">
+    <h1 class="display-4">Employee Management System</h1>
+    <p class="lead">Welcome to the Employee Management System.</p>
+    <p>Manage Employees and Departments efficiently.</p>
+</div>
+
+
+<div class="row">
+    <div class="col-md-6">  
+        <div class="card shadow">
+            <div class="card-body">
+                <h3>🧑‍💼 Employees </h3>
+                <p>
+                    Manage all Employees.
+                </p>
+                <a asp-controller="Employee" asp-action="List" class="btn btn-primary">
+                    View Employees
+                </a>
+                <a asp-controller="Employee" asp-action="Create" class="btn btn-success">
+                    Add Employee
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-body">
+                <h3>🏢 Departments </h3>
+                <p>
+                    Manage departments.
+                </p>
+                <a asp-controller="Department" asp-action="List" class="btn btn-primary">
+                    View Departments
+                </a>
+                <a asp-controller="Department" asp-action="Create" class="btn btn-success">
+                    Add Department
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

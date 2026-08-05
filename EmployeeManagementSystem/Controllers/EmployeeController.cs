@@ -1,5 +1,6 @@
 ﻿using EmployeeManagementSystem.Models;
 using EmployeeManagementSystem.Services;
+using EmployeeManagementSystem.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -13,7 +14,7 @@ namespace EmployeeManagementSystem.Controllers
         {
             this.employeeService = employeeService;
             this.departmentService = departmentService;
-        }
+        }   
 
         public async Task<IActionResult> List()
         {
@@ -34,26 +35,44 @@ namespace EmployeeManagementSystem.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            await LoadDepartmentsAsync();
-            return View();
+            EmployeeFormViewModel vm = await BuildEmployeeFormViewModel();
+            return View(vm);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Employee employee)
+        public async Task<IActionResult> Create(EmployeeFormViewModel vm)
         {
             if(!ModelState.IsValid)
             {
-                await LoadDepartmentsAsync();
-                return View(employee);
+                vm = await BuildEmployeeFormViewModel(vm.Employee);
+                return View(vm);
             }
-            await this.employeeService.AddEmployeeAsync(employee);
+            await this.employeeService.AddEmployeeAsync(vm.Employee);
             return RedirectToAction(nameof(List));
         }
 
-        private async Task LoadDepartmentsAsync()
+        private async Task<EmployeeFormViewModel> BuildEmployeeFormViewModel(Employee? employee = null)
         {
             var departments = await departmentService.GetDepartmentsAsync();
-            ViewBag.Departments = new SelectList(departments, "Id", "Name");
+
+            EmployeeFormViewModel vm = new EmployeeFormViewModel();
+            vm.Employee = employee ?? new Employee();
+
+            List<SelectListItem> departmentItems = new List<SelectListItem>();
+
+            foreach (Department department in departments)
+            {
+                SelectListItem item = new SelectListItem();
+
+                item.Value = department.Id.ToString();
+                item.Text = department.Name;
+
+                departmentItems.Add(item);
+            }
+
+            vm.Departments = departmentItems;
+
+            return vm;
         }
 
         [HttpGet]
@@ -65,21 +84,21 @@ namespace EmployeeManagementSystem.Controllers
                 return View(null);
             }
 
-            await LoadDepartmentsAsync();
-            return View(currentEmployee);
+            EmployeeFormViewModel vm = await BuildEmployeeFormViewModel(currentEmployee);
+            return View(vm);
         }
 
         [HttpPost]
 
-        public async Task<IActionResult> Edit(Employee employee)
+        public async Task<IActionResult> Edit(EmployeeFormViewModel vm)
         {
             if (!ModelState.IsValid)
             {
-                await LoadDepartmentsAsync();
-                return View(employee);
+                vm = await BuildEmployeeFormViewModel(vm.Employee);
+                return View(vm);
             }
 
-            await employeeService.UpdateEmployeeAsync(employee);
+            await employeeService.UpdateEmployeeAsync(vm.Employee);
             return RedirectToAction(nameof(List));
         }
 

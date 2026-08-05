@@ -1,4 +1,6 @@
 using EmployeeManagementSystem.Models;
+using EmployeeManagementSystem.Services;
+using EmployeeManagementSystem.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,9 +8,21 @@ namespace EmployeeManagementSystem.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly DashboardService dashboardService;
+        private readonly ILogger<HomeController> logger;
+        public HomeController(DashboardService dashboardService, ILogger<HomeController> logger)
         {
-            return View();
+            this.logger = logger;
+            this.dashboardService = dashboardService;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            DashboardViewModel vm = new DashboardViewModel();
+            vm.TotalEmployees = await dashboardService.GetTotalEmployeesAsync();
+            vm.TotalDepartments = await dashboardService.GetTotalDepartmentsAsync();
+            vm.AverageSalary = await dashboardService.GetAverageSalaryAsync();
+            return View(vm);
         }
 
         public IActionResult Privacy()
