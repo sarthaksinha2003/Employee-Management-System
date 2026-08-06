@@ -13,34 +13,77 @@
 
 <div class="row">
     <div class="col-md-6">  
-        <div class="card shadow">
+        <div class="card shadow dashboard-card">
             <div class="card-body">
                 <h3>🧑‍💼 Employees </h3>
                 <p>
                     Manage all Employees.
                 </p>
                 <a asp-controller="Employee" asp-action="List" class="btn btn-primary">
-                    View Employees
+                    <i class="bi bi-people-fill"> View Employees </i>
                 </a>
                 <a asp-controller="Employee" asp-action="Create" class="btn btn-success">
-                    Add Employee
+                    <i class="bi bi-person-plus-fill"> Add Employee </i>
                 </a>
             </div>
         </div>
     </div>
     <div class="col-md-6">
-        <div class="card shadow">
+        <div class="card shadow dashboard-card">
             <div class="card-body">
                 <h3>🏢 Departments </h3>
                 <p>
                     Manage departments.
                 </p>
                 <a asp-controller="Department" asp-action="List" class="btn btn-primary">
-                    View Departments
+                    <i class="bi bi-building-fill"> View Departments </i>
                 </a>
                 <a asp-controller="Department" asp-action="Create" class="btn btn-success">
-                    Add Department
+                    <i class="bi bi-plus-circle-fill"> Add Department </i>
                 </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4 g-4 justify-content-center">
+    <div class="col-md-4">
+        <div class="card text-center shadow dashboard-card">
+            <div class="card-body">
+                <h5> <i class="bi bi-person-badge-fill"></i> Total Employees</h5>
+                <h2>@Model.TotalEmployees</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center shadow dashboard-card">
+            <div class="card-body">
+                <h5> <i class="bi bi-diagram-3-fill"></i> Total Departments</h5>
+                <h2>@Model.TotalDepartments</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center shadow dashboard-card">
+            <div class="card-body">
+                <h5> <i class="bi bi-cash-stack"></i> Average Salary</h5>
+                <h2>₹@Model.AverageSalary.ToString("N2")</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center shadow dashboard-card">
+            <div class="card-body">
+                <h5> <i class="bi bi-wallet2"></i> Total Payroll </h5>
+                <h2>₹@Model.TotalSalary.ToString("N2")</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center shadow dashboard-card">
+            <div class="card-body">
+                <h5> <i class="bi bi-trophy-fill"></i> Highest Salary </h5>
+                <h2>₹@Model.HighestSalary.ToString("N2")</h2>
             </div>
         </div>
     </div>

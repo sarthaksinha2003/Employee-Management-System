@@ -1,4 +1,7 @@
 ﻿@model EmployeeManagementSystem.Models.Department
+@{
+    ViewData["Title"] = "Create Page";
+}
 
 <h2>Create Department</h2>
 
@@ -12,10 +15,10 @@
     </div>
 
     <button type="submit" class="btn btn-success">
-        Save
+        <i class="bi bi-floppy-fill"> Save </i>
     </button>
     <a asp-action="List" class="btn btn-secondary">
-        Back To List
+        <i class="bi bi-list-ul"> Back To List </i>
     </a>
 </form>
 

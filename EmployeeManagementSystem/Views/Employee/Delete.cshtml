@@ -1,4 +1,7 @@
 ﻿@model EmployeeManagementSystem.Models.Employee
+@{
+    ViewData["Title"] = "Delete Page";
+}
 
 <h2>Delete Employee</h2>
 
@@ -27,10 +30,10 @@
 <form asp-action="Delete" method="post">
     <input asp-for="Id" type="hidden"/>
     <button class="btn btn-danger" type="submit">
-        Delete
+        <i class="bi bi-trash-fill"> Delete </i>
     </button>
 
     <a asp-action="List" class="btn btn-secondary">
-        Cancel
+        <i class="bi bi-x-circle"> Cancel </i>
     </a>
 </form>

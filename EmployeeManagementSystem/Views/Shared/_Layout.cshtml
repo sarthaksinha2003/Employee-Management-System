@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,6 +12,7 @@
     <title>@ViewData["Title"] - Employee Management System</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/EmployeeManagementSystem.styles.css" asp-append-version="true" />
 </head>
@@ -13,48 +20,51 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">Employee Management System</a>
+                <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index"><i>Employee Management System</i></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button>   
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link @(currentController == "Home" ? "active border-bottom border-3" : "") text-white"
+                               asp-controller="Home" asp-action="Index"><i class="bi bi-house-door"> Home </i></a>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"> Employees </a>
+                            <a class="nav-link dropdown-toggle @(currentController == "Employee" ? "active border-bottom border-3" : "") text-white"
+                               href="#" role="button" data-bs-toggle="dropdown"> <i class="bi bi-people"> Employees  </i></a>
                             <ul class="dropdown-menu">
                                 <li>
                                     <a class="dropdown-item"
                                        asp-controller="Employee"
                                        asp-action="List">
-                                        Employee List
+                                        <i class="bi bi-list"> Employee List </i>
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item"
                                        asp-controller="Employee" 
                                        asp-action="Create">
-                                        Add Employee
+                                        <i class="bi bi-person-plus"> Add Employee </i>
                                     </a>
                                 </li>
                             </ul>
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Departments</a>
+                            <a class="nav-link dropdown-toggle @(currentController == "Department" ? "active border-bottom border-3" : "") text-white"
+                               href="#" role="button" data-bs-toggle="dropdown"> <i class="bi bi-building"> Departments </i></a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item"" asp-controller="Department" asp-action="List">
-                                        Department List
+                                    <a class="dropdown-item" asp-controller="Department" asp-action="List">
+                                        <i class="bi bi-card-list"> Department List </i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" " asp-controller="Department" asp-action="Create">
-                                        Add Department
+                                    <a class="dropdown-item" asp-controller="Department" asp-action="Create">
+                                        <i class="bi bi-plus-circle"> Add Department </i>
                                     </a>
                                 </li>
                             </ul>

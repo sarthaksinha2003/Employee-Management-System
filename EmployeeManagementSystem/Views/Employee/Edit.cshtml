@@ -1,4 +1,7 @@
 ﻿@model EmployeeManagementSystem.ViewModels.EmployeeFormViewModel
+@{
+    ViewData["Title"] = "Edit Page";
+}
 
 <h2>Edit Employee</h2>
 
@@ -39,11 +42,11 @@ else
 
         <div>
             <button type="submit" class="btn btn-primary">
-                Update Employee
+                <i class="bi bi-pencil-square"> Update Employee </i>
             </button>
 
             <a asp-action="List" class="btn btn-secondary">
-                Back To List
+                <i class="bi bi-list-ul"> Back To List </i>
             </a>
         </div>
 

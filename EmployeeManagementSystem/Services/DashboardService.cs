@@ -30,5 +30,23 @@ namespace EmployeeManagementSystem.Services
             }
             return await context.Employees.AverageAsync(e => e.Salary);
         }
+
+        public async Task<double> GetTotalSalaryAsync()
+        {
+            if(await context.Employees.CountAsync() == 0)
+            {
+                return 0;
+            }
+            return await context.Employees.SumAsync(e => e.Salary);
+        }
+
+        public async Task<Double> GetHighestSalaryAsync()
+        {
+            if (await context.Employees.CountAsync() == 0)
+            {
+                return 0;
+            }
+            return await context.Employees.MaxAsync(e => e.Salary);
+        }
     }
 }

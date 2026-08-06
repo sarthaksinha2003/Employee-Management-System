@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Sarthak Sinha\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "EmployeeManagementSystem\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-08-05T13:18:07.108Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-05T12:43:07.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-05T12:43:07.896Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "EmployeeManagementSystem\\Services\\DashboardService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-05T11:56:38.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-05T11:56:38.655Z"
             }
           ]
         },

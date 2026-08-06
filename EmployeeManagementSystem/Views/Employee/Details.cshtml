@@ -1,4 +1,7 @@
 ﻿@model EmployeeManagementSystem.Models.Employee
+@{
+    ViewData["Title"] = "Details Page";
+}
 
 <h2>Employee Details</h2>
 <hr />
@@ -16,5 +19,5 @@ else
 }
 
 <a asp-action="List" class="btn btn-secondary">
-    Back To List
+    <i class="bi bi-list-ul"> Back To List </i>
 </a>

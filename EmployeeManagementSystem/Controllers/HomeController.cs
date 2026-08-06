@@ -22,6 +22,8 @@ namespace EmployeeManagementSystem.Controllers
             vm.TotalEmployees = await dashboardService.GetTotalEmployeesAsync();
             vm.TotalDepartments = await dashboardService.GetTotalDepartmentsAsync();
             vm.AverageSalary = await dashboardService.GetAverageSalaryAsync();
+            vm.TotalSalary = await dashboardService.GetTotalSalaryAsync();
+            vm.HighestSalary = await dashboardService.GetHighestSalaryAsync();
             return View(vm);
         }
 

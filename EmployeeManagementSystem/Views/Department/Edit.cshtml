@@ -1,4 +1,7 @@
 ﻿@model EmployeeManagementSystem.Models.Department
+@{
+    ViewData["Title"] = "Edit Page";
+}
 
 <h2> Edit Department </h2>
 
@@ -12,11 +15,11 @@
     </div>
 
     <button class="btn btn-primary">
-        Update
+        <i class="bi bi-pencil-square"> Update </i>
     </button>
 
     <a asp-action="List" class="btn btn-secondary">
-        Back To List
+        <i class="bi bi-list-ul"> Back To List </i>
     </a>
 </form>
 
