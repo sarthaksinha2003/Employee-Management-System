@@ -3,25 +3,52 @@
     ViewData["Title"] = "Edit Page";
 }
 
-<h2> Edit Department </h2>
+<div class="row justify-content-center">
 
-<form asp-action="Edit" method="post">
-    <input asp-for="Id" type="hidden"/>
+    <div class="col-lg-8">
 
-    <div class="mb-3">
-        <lable asp-for="Name"></lable>
-        <input asp-for="Name" class="form-control"/>
-        <span asp-validation-for="Name" class="text-danger"></span>
+        <div class="card shadow border-primary">
+
+            <div class="card-header bg-primary text-white">
+
+                <h4 class="mb-0">
+
+                    <i class="bi bi-person-plus-fill"></i>
+
+                    Create Department
+
+                </h4>
+
+            </div>
+
+            <div class="card-body">
+
+                <form asp-action="Edit" method="post">
+                    <input asp-for="Id" type="hidden" />
+
+                    <div class="mb-3">
+                        <lable asp-for="Name" class="form-label fw-semibold"></lable>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="mt-4 d-flex gap-2">
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-floppy-fill"> Save </i>
+                        </button>
+                        <a asp-action="List" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left-circle">  Cancel </i>
+                        </a>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <button class="btn btn-primary">
-        <i class="bi bi-pencil-square"> Update </i>
-    </button>
-
-    <a asp-action="List" class="btn btn-secondary">
-        <i class="bi bi-list-ul"> Back To List </i>
-    </a>
-</form>
+</div>
 
 @section Scripts {
     <parial name="_ValidationScriptsPartial" />

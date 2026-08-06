@@ -3,57 +3,76 @@
     ViewData["Title"] = "Edit Page";
 }
 
-<h2>Edit Employee</h2>
+<div class="row justify-content-center">
 
-@if (Model == null)
+    <div class="col-lg-8">
+
+        <div class="card shadow border-primary">
+
+            <div class="card-header bg-primary text-white">
+
+                <h4 class="mb-0">
+
+                    <i class="bi bi-person-plus-fill"></i>
+
+                    Edit Employee
+
+                </h4>
+
+            </div>
+
+            <div class="card-body">
+
+                <form asp-action="Edit" method="post">
+
+                    <div asp-validation-summary="All"
+                         class="text-danger">
+                    </div>
+
+                    <input asp-for="Employee.Id" type="hidden" />
+
+                    <div class="mb-3">
+                        <label asp-for="Employee.Name" class="form-label fw-semibold"></label>
+                        <input asp-for="Employee.Name" class="form-control" />
+                        <span asp-validation-for="Employee.Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Employee.DepartmentId" class="form-label fw-semibold"></label>
+                        <select asp-for="Employee.DepartmentId"
+                                asp-items="Model.Departments"
+                                class="form-select">
+                        </select>
+                        <span asp-validation-for="Employee.Department" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Employee.Salary" class="form-label fw-semibold"></label>
+                        <input asp-for="Employee.Salary" class="form-control" />
+                        <span asp-validation-for="Employee.Salary" class="text-danger"></span>
+                    </div>
+
+                    <div class="mt-4 d-flex gap-2">
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-floppy-fill"> Save </i>
+                        </button>
+
+                        <a asp-action="List" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left-circle">  Cancel </i>
+                        </a>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts
 {
-    <p>No Employee Found.</p>
-}
-else
-{
-    <form asp-action="Edit" method="post">
-
-        <div asp-validation-summary="All"
-        class="text-danger">
-        </div>
-
-        <input asp-for="Employee.Id" type="hidden" />
-
-        <div class="mb-3">
-            <label asp-for="Employee.Name"></label>
-            <input asp-for="Employee.Name" class="form-control" />
-            <span asp-validation-for="Employee.Name" class="text-danger"></span>
-        </div>
-
-        <div class="mb-3">
-            <label asp-for="Employee.DepartmentId"></label>
-            <select asp-for="Employee.DepartmentId"
-                    asp-items="Model.Departments"
-                    class="form-select">
-            </select>
-            <span asp-validation-for="Employee.Department" class="text-danger"></span>
-        </div>
-
-        <div class="mb-3">
-            <label asp-for="Employee.Salary"></label>
-            <input asp-for="Employee.Salary" class="form-control" />
-            <span asp-validation-for="Employee.Salary" class="text-danger"></span>
-        </div>
-
-        <div>
-            <button type="submit" class="btn btn-primary">
-                <i class="bi bi-pencil-square"> Update Employee </i>
-            </button>
-
-            <a asp-action="List" class="btn btn-secondary">
-                <i class="bi bi-list-ul"> Back To List </i>
-            </a>
-        </div>
-
-    </form>
-
-    @section Scripts
-    {
-        <partial name="_ValidationScriptsPartial" />
-    }
+    <partial name="_ValidationScriptsPartial" />
 }

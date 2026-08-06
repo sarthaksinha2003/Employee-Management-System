@@ -21,7 +21,6 @@ C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementS
 C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net10.0\scopedcss\bundle\EmployeeManagementSystem.styles.css
 C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net10.0\scopedcss\projectbundle\EmployeeManagementSystem.bundle.scp.css
-C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net10.0\compressed\9nejpizab4-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net10.0\compressed\my4hs66gfd-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net10.0\compressed\qm32lmlh8e-{0}-bqjiyaj88i-bqjiyaj88i.gz
 C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net10.0\compressed\6lql9t67bf-{0}-c2jlpeoesf-c2jlpeoesf.gz
@@ -224,3 +223,4 @@ C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementS
 C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net10.0\EmployeeManagementSystem.csproj.AssemblyReference.cache
 C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net10.0\Employee.A4622930.Up2Date
+C:\Users\Sarthak Sinha\source\repos\EmployeeManagementSystem\EmployeeManagementSystem\obj\Debug\net10.0\compressed\9nejpizab4-{0}-5xrs6niimc-5xrs6niimc.gz

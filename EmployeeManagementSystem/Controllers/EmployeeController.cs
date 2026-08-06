@@ -48,6 +48,7 @@ namespace EmployeeManagementSystem.Controllers
                 return View(vm);
             }
             await this.employeeService.AddEmployeeAsync(vm.Employee);
+            TempData["Success"] = "Employee created successfully!";
             return RedirectToAction(nameof(List));
         }
 
@@ -99,6 +100,7 @@ namespace EmployeeManagementSystem.Controllers
             }
 
             await employeeService.UpdateEmployeeAsync(vm.Employee);
+            TempData["Success"] = "Employee updated successfully.";
             return RedirectToAction(nameof(List));
         }
 
@@ -118,7 +120,7 @@ namespace EmployeeManagementSystem.Controllers
         public async Task<IActionResult> Delete(Employee employee)
         {
             await this.employeeService.DeleteEmployeeAsync(employee.Id);
-
+            TempData["Success"] ="Employee deleted successfully.";
             return RedirectToAction(nameof(List));
         }
     }

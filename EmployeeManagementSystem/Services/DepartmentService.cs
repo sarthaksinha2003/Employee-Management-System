@@ -1,4 +1,5 @@
 ﻿using EmployeeManagementSystem.Data;
+using EmployeeManagementSystem.Enums;
 using EmployeeManagementSystem.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -40,14 +41,22 @@ namespace EmployeeManagementSystem.Services
             }
         }
 
-        public async Task DeleteDepartmentAsync(int id)
+        public async Task<DeleteDepartmentResult> DeleteDepartmentAsync(int id)
         {
             Department? department = await context.Departments.FindAsync(id);
-            if(department != null)
+            if(department == null)
             {
-                context.Departments.Remove(department);
-                await context.SaveChangesAsync();
+                return DeleteDepartmentResult.NotFound;
             }
+
+            bool hasEmployees = await context.Employees.AnyAsync(e => e.DepartmentId == id);
+            if(hasEmployees) 
+            {
+                return DeleteDepartmentResult.HasEmployees;
+            }
+            context.Departments.Remove(department);
+            await context.SaveChangesAsync();
+            return DeleteDepartmentResult.Success;
         }
     }
 }

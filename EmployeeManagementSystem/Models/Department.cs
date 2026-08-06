@@ -7,6 +7,7 @@ namespace EmployeeManagementSystem.Models
         [Key]
         public int Id { get; set; }
 
+        [Display(Name = "Department")]
         [Required(ErrorMessage = "Name is required.")]
         public string Name { get; set; } = string.Empty;
 

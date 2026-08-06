@@ -1,4 +1,5 @@
-﻿using EmployeeManagementSystem.Models;
+﻿using EmployeeManagementSystem.Enums;
+using EmployeeManagementSystem.Models;
 using EmployeeManagementSystem.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -87,8 +88,24 @@ namespace EmployeeManagementSystem.Controllers
 
         public async Task<IActionResult> Delete(Department department)
         {
-            await departmentService.DeleteDepartmentAsync(department.Id);
+            var result = await departmentService.DeleteDepartmentAsync(department.Id);
+            switch (result)
+            {
+                case DeleteDepartmentResult.Success:
+                    TempData["Success"] = "Department deleted successfully.";
+                    break;
+
+                case DeleteDepartmentResult.NotFound:
+                    TempData["Error"] = "Department not found.";
+                    break;
+
+                case DeleteDepartmentResult.HasEmployees:
+                    TempData["Error"] = "Cannot delete department because it contains employees.";
+                    break;
+            }
+
             return RedirectToAction(nameof(List));
         }
+
     }
 }
