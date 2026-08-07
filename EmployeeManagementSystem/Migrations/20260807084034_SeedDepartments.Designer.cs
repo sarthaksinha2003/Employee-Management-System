@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeeManagementSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260804121700_SeedDepartments")]
+    [Migration("20260807084034_SeedDepartments")]
     partial class SeedDepartments
     {
         /// <inheritdoc />
